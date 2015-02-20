@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon image_src" href="apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+
+    <link rel="stylesheet" type="text/css" href="#PUT_CSS_REF_HERE#">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      .test {
+        width: 400px;
+        height: 40px;
+        margin: 4px;
+        background: lightblue;
+      }
+
+    </style>
+
+</head>
+<body>
+    <div>
+      <div class="test"></div>
+      <div class="test test1"></div>
+      <div class="test"></div>
+      <div class="test test4"></div>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="jquery.plugin-sample.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+          $('.test').plugin({});
+
+          alert('Plugins instantiated');
+
+          alert('Option "value" of element with class "test1" is: '
+            + $('.test1').plugin('option', 'value')
+            + '\nOption "value" of element with class "test4" is: '
+            + $('.test4').plugin('option', 'value'));
+
+          $('.test1').plugin('option', 'value', 123);
+          $('.test4').plugin('option', 'value', "Hello, world!");
+
+          alert('Option "value" of element with class "test1" is: '
+            + $('.test1').plugin('option', 'value')
+            + '\nOption "value" of element with class "test4" is: '
+            + $('.test4').plugin('option', 'value'));
+        });
+    </script>
+</body>
+</html
