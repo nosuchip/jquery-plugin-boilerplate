@@ -47,13 +47,14 @@ ambiguility.
 elemets under plugin's markup.
 - `bind` - perform binding of handlers to events. If  you'd  like  to  make  it
 re-runnable (what is usually not required) will be  a  good  practice  to  bind
-like:```
+like:
+```
 self.$element
         .off('#some.selector', self._handler)
         .on('#some.selector', self._handler);
 ```
-But  more  much  better   is   just   put   `self.$element.on('#some.selector',
-self._handler);` it will bind any dynamic elements which could  appears  inside
+
+But  more  much  better   is   just   put   `self.$element.on('#some.selector', self._handler);` it will bind any dynamic elements which could  appears  inside
 plugin's markup after binding.
 
 - `refresh` - Method aimed to prepare plugin with all options  set  to  working
