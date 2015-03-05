@@ -25,6 +25,10 @@
             self.refresh();
         };
 
+        self.el = function(selector) {
+            return self.$element.find(selector);
+        };
+
         //Initialze all control bindings. Should be re-callable to support options changes if required
         self.bind = function() {
             //TODO: Put your controls binding here
