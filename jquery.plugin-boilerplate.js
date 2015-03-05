@@ -67,6 +67,14 @@
                     }
                 });
             }
+        } else if (options === 'instance') {
+            if (this.length === 1) {
+                return this.data($.plugin.className);
+            } else {
+                return this.each(function(){
+                    this.data($.plugin.className);
+                });
+            }
         }
 
         return this.each(function(){
